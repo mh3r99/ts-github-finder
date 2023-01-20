@@ -1,9 +1,10 @@
-import styles from './Container.module.scss';
+import { ReactNode } from "react";
+import styles from "./Container.module.scss";
 
-interface ContainerProps { }
+interface ContainerProps {
+  children: ReactNode;
+}
 
-export const Container = ({ }: ContainerProps) => (
-  <div className={styles.Container} data-testid="Container">
-    Container Component
-  </div>
+export const Container = ({ children }: ContainerProps) => (
+  <div className={styles.container}>{children}</div>
 );
